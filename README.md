@@ -65,7 +65,7 @@ O limiar escolhido na interface é respeitado; não existe piso oculto de confia
 Os escores de modelos diferentes não representam probabilidades calibradas nem são diretamente comparáveis.
 
 ## Situação da validação
-Samuel confirmou análise funcional de fotos e redução de tempo nas execuções após a inicialização.
+A análise funcional de fotos e redução de tempo nas execuções após a inicialização.
 Não foram feitas medições independentes de acurácia nem validação física da cancela neste ambiente.
 Em 19/11/2026, os 42 testes de regras passaram no ambiente local com Python 3.11.9, e pip check não encontrou conflitos.
 Esses testes não substituem a instalação completa em uma máquina limpa, a avaliação do OCR em fotos reais ou os ensaios físicos.
