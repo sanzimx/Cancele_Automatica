@@ -1,0 +1,11 @@
+Derivados da fotografia 1990-2018 Particular.jpg, de JasonVogel1970.
+Fonte: https://commons.wikimedia.org/wiki/File:1990-2018_Particular.jpg
+Original preservado na pasta superior.
+Licenca da foto e destes derivados: CC BY-SA 4.0.
+https://creativecommons.org/licenses/by-sa/4.0/
+Alteracoes: escurecimento multiplicativo 0,35; desfoque gaussiano 11x11, sigma 2,5;
+e combinacao dos dois. Exportacao JPEG com qualidade 95.
+Derivados criados pelo codigo do projeto para avaliar robustez do OCR.
+Desfoque gaussiano nao reproduz todos os efeitos de movimento ou de uma camera real.
+O texto esperado da placa deve ser transcrito olhando a original, nao usando a saida OCR.
+Nao se presume que o sistema reconhecera as imagens degradadas.

@@ -1,0 +1,2 @@
+image,expected_plate,expected_authorized,condition,split
+placa_demo.pgm,ABC1D23,1,sintetico_bitmap,test

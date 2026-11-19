@@ -1,0 +1,13 @@
+# Conjunto proposto para Python 3.11 x64 no Windows. Ainda não validado neste ambiente.
+# Somente opencv-python-headless: evita instalar duas distribuições de cv2.
+easyocr==1.7.2
+opencv-python-headless==4.10.0.84
+numpy==1.26.4
+Pillow==10.4.0
+pyserial==3.5
+torch==2.5.1
+torchvision==0.20.1
+reportlab==4.2.5
+open-image-models[onnx]==0.6.0
+onnxruntime==1.20.1
+fast-plate-ocr[onnx]==1.1.0

@@ -1,0 +1,23 @@
+CANCELA INTELIGENTE
+==================
+
+Abra COMECE_AQUI.html para ver o guia ilustrado de instalacao e uso.
+
+PRIMEIRA INSTALACAO EM OUTRO COMPUTADOR
+1. Extraia a pasta inteira. Nao execute os arquivos de dentro do ZIP.
+2. Feche outras janelas deste programa e tenha internet.
+3. Execute instalar.bat.
+4. Aguarde: ambiente Python, dependencias, detector, OCR e verificacoes.
+5. Quando terminar sem erro, execute iniciar.bat.
+
+O instalar.bat tenta instalar Python 3.11 por "py install 3.11" quando
+o gerenciador Python esta disponivel. Se nao houver launcher py, instale
+Python 3.11 x64 com Tcl/Tk e o launcher antes de repetir a instalacao.
+
+
+ARQUIVOS INTERNOS
+Nao mova app.py, ocr_service.py, src, tools, requirements.txt ou firmware.
+Config.local.json guarda seu cadastro e parametros. Ele e preservado.
+Outputs guarda historico, evidencias e diagnosticos.
+Arquivo guarda material antigo, que nao precisa executar.
+O inventario local sera registrado em docs\organizacao ao abrir o programa.

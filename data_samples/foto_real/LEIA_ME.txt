@@ -1,0 +1,9 @@
+A fotografia sera baixada ao clicar no botao Foto real da interface.
+Alternativa: execute BAIXAR_FOTO_REAL.bat na raiz do projeto.
+Arquivo esperado: carro_placa_brasileira.jpg
+Autor: JasonVogel1970. Licenca CC BY-SA 4.0.
+Fonte: https://commons.wikimedia.org/wiki/File:1990-2018_Particular.jpg
+Licenca: https://creativecommons.org/licenses/by-sa/4.0/
+O download precisa de internet e sera validado antes de salvar.
+Esta pasta ainda contem somente instrucoes ate a primeira execucao do download.
+Teste somente por foto, sem acionamento do rele.

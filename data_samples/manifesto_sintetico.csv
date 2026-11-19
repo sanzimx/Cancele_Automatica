@@ -1,0 +1,7 @@
+image,expected_plate,expected_authorized,condition,split
+autorizada.png,ABC1D23,1,frontal,test
+negada.png,XYZ9A88,0,frontal,test
+antiga.png,ABC1234,0,frontal,test
+escura.png,ABC1D23,1,pouca_luz,test
+desfocada.png,XYZ9A88,0,desfoque,test
+sem_placa.png,,0,negativo,test

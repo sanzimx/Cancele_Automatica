@@ -1,0 +1,12 @@
+Fotografia: 1990-2018 Particular.jpg
+Autor: JasonVogel1970
+Data informada pelo autor: 12/09/2018
+Fonte: https://commons.wikimedia.org/wiki/File:1990-2018_Particular.jpg
+Arquivo original: https://upload.wikimedia.org/wikipedia/commons/7/7e/1990-2018_Particular.jpg
+Licenca: Creative Commons Atribuicao-CompartilhaIgual 4.0 Internacional
+https://creativecommons.org/licenses/by-sa/4.0/
+Copia sem alteracoes. Recortes exportados devem preservar os creditos e a licenca.
+Uso neste projeto: hipotese de teste OCR, sem acionamento fisico.
+A foto nao demonstra autorizacao real do veiculo.
+Nenhuma leitura correta ou desempenho foi presumido.
+O rotulo esperado deve ser transcrito visualmente antes de avaliar o OCR.

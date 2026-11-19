@@ -1,0 +1,16 @@
+.venv/
+__pycache__/
+*.py[cod]
+outputs/
+Fotos_Cancela/
+config.local.json
+*.log
+.env
+.env.*
+models/
+docs/evidencias_reais/
+data_samples/reais/
+dist/
+arquivo/
+docs/organizacao/
+ocr_especializado.json

@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Comece aqui — Cancela inteligente</title>
+<style>
+:root{color-scheme:light;--ink:#152e41;--muted:#516472;--blue:#155c93;--line:#dce4eb}
+*{box-sizing:border-box}body{margin:0;font:17px/1.65 "Segoe UI",Arial,sans-serif;color:var(--ink);background:#f3f6f9}
+header{background:#152e41;color:white;padding:50px max(24px,calc((100% - 1080px)/2))}
+header small{letter-spacing:2px;color:#a7d8f1;text-transform:uppercase}
+h1{font-size:42px;line-height:1.15;margin:12px 0}header p{max-width:850px;color:#d2e2ef;margin:15px 0 0}
+main{max-width:1080px;padding:12px 28px 60px;margin:auto;background:white}
+nav{display:flex;gap:22px;flex-wrap:wrap;padding:20px 0;border-bottom:1px solid var(--line)}
+a{color:var(--blue)}section{padding:26px 0;border-bottom:1px solid var(--line)}
+h2{font-size:28px;line-height:1.25;margin:0 0 18px}h3{font-size:20px;margin:20px 0 8px}
+p{margin:10px 0}li{padding:5px 0}code{font:15px Consolas,monospace;background:#edf2f6;padding:2px 6px;border-radius:3px}
+table{width:100%;border-collapse:collapse;margin:18px 0}
+th,td{text-align:left;vertical-align:top;padding:13px 12px;border-bottom:1px solid var(--line)}
+th{background:#edf2f6}td:first-child{white-space:nowrap;font-weight:600}
+.note{border-left:4px solid #2e7b92;padding:10px 18px;background:#f1f7fa;margin:20px 0}
+footer{font-size:14px;color:var(--muted);padding-top:24px}
+@media(max-width:700px){h1{font-size:32px}main{padding:8px 18px 40px}table{font-size:14px}td:first-child{white-space:normal}}
+@media print{body{background:white}header{padding:20px;color:black;background:white}header p,header small{color:black}nav{display:none}main{max-width:none;padding:0}section{break-inside:avoid}a{color:black}}
+</style>
+</head>
+<body>
+<header>
+<small>Projeto de Pedro · Computação Gráfica</small>
+<h1>Cancela inteligente</h1>
+<p>Guia de instalação e uso do reconhecimento de placas. A instalação completa prepara o detector e o OCR. O acionamento físico da cancela será validado em uma próxima etapa.</p>
+</header>
+<main>
+<nav><a href="#nova">Máquina nova</a><a href="#uso">Uso diário</a><a href="#arquivos">Qual arquivo abrir</a><a href="#outra">Levar para outro computador</a><a href="#erro">Se der erro</a></nav>
+<section id="uso">
+<h2>Já funciona neste computador?</h2>
+<p>Abra <code>iniciar.bat</code>. Você não precisa reinstalar o programa a cada uso.</p>
+<p>Para preparar novamente os modelos ou reparar as dependências, feche a interface e execute <code>ativar_ocr.bat</code>. Ele prepara <strong>o detector de placas e o OCR especializado</strong>.</p>
+</section>
+<section id="nova">
+<h2>Primeira instalação em uma máquina nova</h2>
+<ol>
+<li><strong>Extraia a pasta inteira.</strong> Se recebeu um ZIP, extraia antes de executar qualquer lote. Não abra o instalador de dentro do WinRAR.</li>
+<li><strong>Conecte à internet.</strong> A instalação baixa dependências e modelos. Não há um pacote offline nesta versão.</li>
+<li><strong>Execute <code>instalar.bat</code>.</strong> O lote procura ou cria um ambiente com Python 3.11. Se o gerenciador Python estiver disponível, tenta instalar a versão necessária.</li>
+<li><strong>Se o comando <code>py</code> não existir:</strong> instale Python 3.11 de 64 bits com Tcl/Tk e o launcher Python e execute o instalador novamente.</li>
+<li><strong>Aguarde todas as etapas.</strong> O instalador prepara dependências, detector, OCR, testes e materiais de demonstração. Uma falha interrompe o processo e gera uma mensagem.</li>
+<li><strong>Abra <code>iniciar.bat</code>.</strong> Teste por foto antes de conectar câmera ou circuito.</li>
+</ol>
+<div class="note">Não copie a pasta <code>.venv</code> de outro computador. Ela será criada no destino. Cadastro, imagens e resultados existentes são preservados na máquina em uso.</div>
+<h3>O que o instalador completo prepara</h3>
+<p>Python 3.11 no ambiente do projeto, bibliotecas de <code>requirements.txt</code>, detector YOLOv9, OCR especializado FastPlateOCR e EasyOCR. Também confere a sintaxe e os testes e gera amostras e PDF quando estiverem ausentes.</p>
+</section>
+<section id="arquivos">
+<h2>Qual arquivo abrir</h2>
+<table>
+<thead><tr><th>Arquivo</th><th>Quando usar</th><th>O que faz</th></tr></thead>
+<tbody>
+<tr><td>instalar.bat</td><td>Primeira instalação</td><td>Prepara o ambiente completo, detector e OCR. Reaproveita um ambiente existente compatível.</td></tr>
+<tr><td>iniciar.bat</td><td>Uso diário</td><td>Abre a interface e registra o inventário local dos arquivos.</td></tr>
+<tr><td>ativar_ocr.bat</td><td>Manutenção dos modelos</td><td>Instala as dependências previstas e prepara tanto o detector quanto o reconhecedor especializado.</td></tr>
+<tr><td>validar.bat</td><td>Conferir a instalação</td><td>Verifica sintaxe, testes e consistência das dependências. Salva registros em outputs.</td></tr>
+<tr><td>gerar_pacote.bat</td><td>Levar para outra máquina</td><td>Cria um ZIP limpo com o código, os instaladores, dependências e materiais necessários.</td></tr>
+</tbody>
+</table>
+<p>Os lotes “corrigidos” e os ativadores anteriores ficam em <code>arquivo/lotes_antigos</code>. Eles foram preservados como histórico e não devem ser usados no fluxo atual.</p>
+</section>
+<section>
+<h2>Primeiro teste por foto</h2>
+<ol>
+<li>Abra <code>iniciar.bat</code>.</li>
+<li>Clique em <strong>Foto exemplo</strong> e depois <strong>Analisar</strong>. Esse botão usa um cartão sintético e desativa o detector de placas.</li>
+<li>Para uma fotografia de veículo, use <strong>Abrir foto</strong> ou <strong>Foto real</strong>. Mantenha <strong>Localizar placas automaticamente</strong> marcado.</li>
+<li>O programa localiza cada placa, recorta a imagem original e tenta ler os caracteres. <strong>Busca distante</strong> usa mais janelas e pode demorar mais.</li>
+<li>Confira o texto detectado e o escore. No modo <strong>Veicular</strong>, são aplicados os formatos brasileiros configurados. No modo <strong>Identificadores</strong>, o cadastro admite texto livre de 3 a 10 letras e números.</li>
+<li>O limiar em <strong>Confiança mínima</strong> é respeitado. Um cadastro não aumenta a confiança do OCR nem corrige os caracteres automaticamente.</li>
+<li>Use <strong>Salvar cadastro e parâmetros</strong> para manter a configuração e <strong>Salvar evidência</strong> para registrar o resultado.</li>
+</ol>
+<div class="note">Mantenha <strong>Autorizar pelo sensor</strong> desmarcado nos testes por foto. A primeira análise pode demorar para carregar modelos; compare também as execuções seguintes.</div>
+</section>
+<section id="outra">
+<h2>Levar o programa para outro computador</h2>
+<ol>
+<li>Nesta máquina instalada, execute <code>gerar_pacote.bat</code>.</li>
+<li>Copie <code>dist/Cancela_Inteligente_Instalacao.zip</code> para o outro computador.</li>
+<li>Extraia a pasta, conecte à internet e execute <code>instalar.bat</code>.</li>
+</ol>
+<p>O ZIP contém código, scripts, testes, firmware, documentação e amostras controladas. Ele não leva o ambiente virtual, os pesos em cache, seu cadastro, os registros de acessos ou as fotos reais.</p>
+</section>
+<section>
+<h2>Entenda as pastas</h2>
+<table>
+<tr><th>Pasta ou arquivo</th><th>Finalidade</th></tr>
+<tr><td>src</td><td>Módulos de câmera, detector, OCR, revisão e métricas.</td></tr>
+<tr><td>tools</td><td>Rotinas internas chamadas pelos lotes. Mantenha junto ao projeto.</td></tr>
+<tr><td>tests</td><td>Testes de regras e integrações simuladas.</td></tr>
+<tr><td>firmware</td><td>Código do ESP32, preservado para a futura validação física.</td></tr>
+<tr><td>data_samples</td><td>Imagens para demonstração e testes.</td></tr>
+<tr><td>docs</td><td>Documentação técnica, apresentação e orientações.</td></tr>
+<tr><td>outputs</td><td>Histórico, evidências, métricas e registros de erro locais.</td></tr>
+<tr><td>config.local.json</td><td>Cadastro e parâmetros salvos neste computador.</td></tr>
+<tr><td>ocr_especializado.json</td><td>Ativação local do reconhecedor especializado.</td></tr>
+<tr><td>arquivo</td><td>Histórico e arquivos antigos preservados, fora do uso normal.</td></tr>
+<tr><td>dist</td><td>Pacote ZIP para instalação em outra máquina.</td></tr>
+</table>
+<p>Não mova os módulos Python isoladamente. O programa precisa da estrutura completa da pasta.</p>
+</section>
+<section id="erro">
+<h2>Se aparecer uma falha</h2>
+<p>Leia a primeira mensagem de erro da janela. Os lotes de manutenção param na etapa que falhou. Os registros ficam em <code>outputs</code>.</p>
+<p>Para conferir o ambiente sem conectar hardware, use <code>validar.bat</code>. Para preparar novamente dependências e modelos, use <code>ativar_ocr.bat</code>.</p>
+<p><strong>SEM_PLACA:</strong> o detector não localizou uma placa. <strong>BAIXA_CONFIANCA:</strong> existe texto, mas o escore não atingiu o limite. <strong>FORMATO_INVALIDO:</strong> o texto não corresponde ao modo selecionado. <strong>MULTIPLAS_PLACAS:</strong> há resultados separados, sem autorização global.</p>
+</section>
+<section>
+<h2>Estado desta organização</h2>
+<p>Os testes com fotos já funcionaram nas execuções relatadas por Samuel. O novo instalador consolidado ainda precisa de validação local, inclusive em uma máquina limpa.</p>
+<p>O terminal do ambiente de edição falha antes de executar Python. Por isso o inventário completo será gerado localmente, ao abrir o programa. Somente sobras conhecidas são arquivadas; nenhum arquivo desconhecido é apagado.</p>
+<p>A próxima etapa será validar câmera, porta serial, sensor, botão e relé do ESP32. Um teste de OCR aprovado não confirma o funcionamento físico da cancela.</p>
+</section>
+<footer>Guia atual de instalação e uso. Consulte docs/ENTREGA.md para mais detalhes e docs/CREDITOS.md para fontes e autoria assistida.</footer>
+</main>
+</body></html>
